@@ -325,8 +325,8 @@
    */
   "projects": [
     {
-      "packageName": "label",
-      "projectFolder": "@dbykov/label",
+      "packageName": "@dbykov/Label",
+      "projectFolder": "@dbykov/Label",
       "reviewCategory": "production"
     },
     // {
