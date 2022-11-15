@@ -28,7 +28,7 @@
    */
   // "pnpmVersion": "6.7.1",
 
-   "npmVersion": "19.1.0",
+   "npmVersion": "16.13.0",
   // "yarnVersion": "1.9.4",
 
   /**
@@ -324,6 +324,11 @@
    * 3. It's useful to have a centralized inventory of all projects and their important metadata.
    */
   "projects": [
+    {
+      "packageName": "label",
+      "projectFolder": "@dbykov/label",
+      "reviewCategory": "production"
+    },
     // {
     //   /**
     //    * The NPM package name of the project (must match package.json)
