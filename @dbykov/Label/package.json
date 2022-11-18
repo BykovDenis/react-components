@@ -1,5 +1,5 @@
 {
-  "name": "@dbykov/Label",
+  "name": "@dbykov/label",
   "version": "0.0.1",
   "description": "Label react UI",
   "main": "dist/index.js",
