@@ -5,3 +5,5 @@ rollup*
 tsconfig*
 .rush
 label.build*
+*stories.*
+*.log

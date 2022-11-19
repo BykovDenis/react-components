@@ -13,7 +13,6 @@ importers:
       '@babel/plugin-syntax-jsx': ^7.14.5
       '@babel/preset-env': ^7.1.0
       '@babel/preset-react': ^7.0.0
-      '@denisbykov/label': ^0.0.5
       '@types/react': ^18.0.25
       '@types/react-dom': ^18.0.9
       '@types/styled-components': ^5.1.18
@@ -65,7 +64,6 @@ importers:
       webpack-dev-server: ^4.11.1
       webpackbar: ^5.0.0-3
     dependencies:
-      '@denisbykov/label': 0.0.5
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
@@ -1668,10 +1666,6 @@ packages:
       exec-sh: 0.3.6
       minimist: 1.2.7
     dev: true
-
-  /@denisbykov/label/0.0.5:
-    resolution: {integrity: sha512-GynuqMB2xXrsqpczHNsxno+5o/Q6xTP1tcUZy924z6htmDx1Rvr9rjxk7KDs5JnKoj7V/1BArEPXHJphyOqpKQ==}
-    dev: false
 
   /@discoveryjs/json-ext/0.5.7:
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}
