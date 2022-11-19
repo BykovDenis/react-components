@@ -3,9 +3,9 @@ import TLabel from "../types/tlabel";
 import LabelStyled from './label.styled';
 
 
-const Label: React.FunctionComponent<TLabel> = (props: TLabel) => {
+const ProgressBar: React.FunctionComponent<TLabel> = (props: TLabel) => {
 	return <LabelStyled>{props.children}</LabelStyled>
 }
 
-export default Label
+export default ProgressBar
 

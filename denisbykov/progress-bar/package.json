@@ -1,6 +1,6 @@
 {
-  "name": "@denisbykov/label",
-  "version": "0.0.5",
+  "name": "@denisbykov/progressbar",
+  "version": "0.0.1",
   "description": "Label react UI",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",

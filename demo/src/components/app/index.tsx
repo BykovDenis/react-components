@@ -6,7 +6,7 @@ const App: FunctionComponent = () => {
   return (
     <Fragment>
       <h1>Demo components</h1>
-      <Label><span>Some label text</span></Label>
+      <Label>Some label text</Label>
     </Fragment>
   );
 };
