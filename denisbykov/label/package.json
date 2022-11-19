@@ -12,9 +12,6 @@
     "build-dev": "rollup -w -c rollup.config.dev.js",
     "clean-node-modules": "rm -rf node_modules"
   },
-  "publishConfig": {
-    "registry": "https://github.com/BykovDenis/react-components.git"
-  },
   "devDependencies": {
     "@babel/plugin-syntax-jsx": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
@@ -43,5 +40,6 @@
     "webpack": "5.65",
     "tslib": "^2.3.1"
   },
-  "gitHead": "a5deb14a67f2b5234ffd0d305593cd81fc18ec80"
+  "gitHead": "a5deb14a67f2b5234ffd0d305593cd81fc18ec80",
+  "private": "false"
 }
