@@ -333,7 +333,7 @@
       "packageName": "@denisbykov/demo",
       "projectFolder": "demo",
       "reviewCategory": "tools"
-    },
+    }
     // {
     //   /**
     //    * The NPM package name of the project (must match package.json)

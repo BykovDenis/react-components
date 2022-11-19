@@ -27,7 +27,7 @@ module.exports = {
     'demo-css': {
       import: paths.appIndexScss,
     },
-    shared: ['react', 'react-dom', 'redux', 'react-redux', 'lodash', '@material-ui/core', '@material-ui/icons'],
+    shared: ['react', 'react-dom'],
   },
   output: {
     // The build folder.
@@ -126,15 +126,6 @@ module.exports = {
     new ForkTsCheckerWebpackPlugin(),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
-    new WebpackBar(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        PRODUCTION: JSON.stringify(true),
-        REACT_APP_ENV: JSON.stringify('production'),
-        REACT_APP_VERSION: JSON.stringify('$npm_package_version'),
-        REACT_APP_NAME: JSON.stringify('$npm_package_name'),
-        REACT_APP_BRANCH_NAME: JSON.stringify('feature/web/CIBFV-2091'),
-      },
-    }),
+    new WebpackBar()
   ],
 };
