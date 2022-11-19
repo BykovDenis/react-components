@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, FunctionComponent } from 'react';
 import './index.css';
 
-const App: React.FunctionComponent = () => {
+const App: FunctionComponent = () => {
   return (
     <Fragment>
       <h1>Demo components</h1>

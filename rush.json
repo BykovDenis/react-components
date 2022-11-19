@@ -326,7 +326,7 @@
   "projects": [
     {
       "packageName": "@denisbykov/label",
-      "projectFolder": "@denisbykov/label",
+      "projectFolder": "denisbykov/label",
       "reviewCategory": "production"
     },
     {
