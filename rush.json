@@ -325,9 +325,14 @@
    */
   "projects": [
     {
-      "packageName": "@dbykov/label",
-      "projectFolder": "@dbykov/label",
+      "packageName": "@denisbykov/label",
+      "projectFolder": "@denisbykov/label",
       "reviewCategory": "production"
+    },
+    {
+      "packageName": "@denisbykov/demo",
+      "projectFolder": "demo",
+      "reviewCategory": "tools"
     },
     // {
     //   /**
