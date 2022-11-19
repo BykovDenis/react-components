@@ -75,3 +75,4 @@ dist
 build
 .npmrc
 .npmrc-publish
+.temp_cache
