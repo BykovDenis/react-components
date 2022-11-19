@@ -1,6 +1,6 @@
 type TLabel = {
 	color?: string,
-	children?: React.ReactElement | string
+	children?: any,
 }
 
 export default TLabel
