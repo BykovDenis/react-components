@@ -6,14 +6,7 @@ const webpack = require('webpack');
 const paths = require('./paths');
 const WebpackBar = require('webpackbar');
 
-
-const publicPath = '/'; // paths.servedPath;
-// const smp = new SpeedMeasurePlugin();
-
-// замер производительности сборки
-// module.exports = smp.wrap({
-//   /* ... */
-// });
+const publicPath = '/';
 
 module.exports = {
   mode: 'development',
