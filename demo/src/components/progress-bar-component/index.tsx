@@ -1,17 +1,57 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import ProgressBar from "@denisbykov/progress-bar";
 import Paper from "../common/paper";
 import ContentContainer from "./content-container.styled";
 import SettingsContainerStyled from "./settings-container.styled";
+import Input from "../common/input/index.styled";
+import FormControl from "../common/form-control/index.styled";
+import Checkbox from "../common/checkbox/index.styled";
 
 const ProgressBarComponent: React.FunctionComponent = () => {
+  const [progress, setProgress] = useState<number>(45);
+  const [isAnimate, setIsAnimate] = useState<boolean>(false);
+
+  const onProgressChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
+    const element = evt.target;
+    setProgress(parseInt(element.value, 10));
+  };
+
+  const onIsAnimateChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
+    const element = evt.target;
+    setIsAnimate(element.checked);
+  };
+
   return (
     <ContentContainer>
       <h1>Progress bar</h1>
-      <ProgressBar progress={75} />
+      <ProgressBar progress={progress} isAnimate={isAnimate} />
       <SettingsContainerStyled>
         <Paper>
-          <h2>Settings</h2>
+          <h2>Properties</h2>
+          <form method="GET">
+            <FormControl width="180px" margin="0 0 15px 0">
+              <label htmlFor="progress">Progress </label>
+              <Input
+                id="progress"
+                name="progress"
+                value={progress}
+                onChange={onProgressChange}
+                type="number"
+                min="0"
+                max="100"
+                width="110px"
+              />
+            </FormControl>
+            <FormControl width="180px">
+              <label htmlFor="isAnimate">isAnimate</label>
+              <Checkbox
+                id="isAnimate"
+                name="isAnimate"
+                checked={isAnimate}
+                onChange={onIsAnimateChange}
+              />
+            </FormControl>
+          </form>
         </Paper>
       </SettingsContainerStyled>
     </ContentContainer>
