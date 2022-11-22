@@ -10,6 +10,9 @@ import Checkbox from "../common/checkbox/index.styled";
 const ProgressBarComponent: React.FunctionComponent = () => {
   const [progress, setProgress] = useState<number>(45);
   const [isAnimate, setIsAnimate] = useState<boolean>(false);
+  const [fillColor, setFillColor] = useState<string>("#2f4699");
+  const [borderColor, setBorderColor] = useState<string>("#666666");
+  const [backgroundColor, setBackgroundColor] = useState<string>("#ffffff");
 
   const onProgressChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     const element = evt.target;
@@ -21,37 +24,105 @@ const ProgressBarComponent: React.FunctionComponent = () => {
     setIsAnimate(element.checked);
   };
 
+  const onBackgroundColorChange = (
+    evt: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const element = evt.target;
+    setBackgroundColor(element.value);
+  };
+
+  const onBorderColorChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
+    const element = evt.target;
+    setBorderColor(element.value);
+  };
+
+  const onFillColorChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
+    const element = evt.target;
+    setFillColor(element.value);
+  };
+
   return (
     <ContentContainer>
       <h1>Progress bar</h1>
-      <ProgressBar progress={progress} isAnimate={isAnimate} />
+      <ProgressBar
+        progress={progress}
+        isAnimate={isAnimate}
+        fillColor={fillColor}
+        backgroundColor={backgroundColor}
+        borderColor={borderColor}
+      />
       <SettingsContainerStyled>
         <Paper>
           <h2>Properties</h2>
-          <form method="GET">
-            <FormControl width="180px" margin="0 0 15px 0">
-              <label htmlFor="progress">Progress </label>
-              <Input
-                id="progress"
-                name="progress"
-                value={progress}
-                onChange={onProgressChange}
-                type="number"
-                min="0"
-                max="100"
-                width="110px"
-              />
+          <FormControl justifyContent="flex-start">
+            <FormControl width="30%">
+              <form method="GET">
+                <FormControl width="180px" margin="0 0 15px 0">
+                  <label htmlFor="progress">Progress </label>
+                  <Input
+                    id="progress"
+                    name="progress"
+                    value={progress}
+                    onChange={onProgressChange}
+                    type="number"
+                    min="0"
+                    max="100"
+                    width="110px"
+                  />
+                </FormControl>
+                <FormControl width="180px" margin="0 0 15px 0">
+                  <label htmlFor="isAnimate">isAnimate</label>
+                  <Checkbox
+                    id="isAnimate"
+                    name="isAnimate"
+                    checked={isAnimate}
+                    onChange={onIsAnimateChange}
+                  />
+                </FormControl>
+                <FormControl width="180px" margin="0 0 15px 0">
+                  <label htmlFor="fillColor">Fill color</label>
+                  <Input
+                    id="fillColor"
+                    name="fillColor"
+                    value={fillColor}
+                    onChange={onFillColorChange}
+                    width="110px"
+                  />
+                </FormControl>
+                <FormControl width="180px" margin="0 0 15px 0">
+                  <label htmlFor="backgroundColor">Background color</label>
+                  <Input
+                    id="backgroundColor"
+                    name="backgroundColor"
+                    value={backgroundColor}
+                    onChange={onBackgroundColorChange}
+                    width="110px"
+                  />
+                </FormControl>
+                <FormControl width="180px" margin="0 0 15px 0">
+                  <label htmlFor="borderColor">Border color</label>
+                  <Input
+                    id="borderColor"
+                    name="borderColor"
+                    value={borderColor}
+                    onChange={onBorderColorChange}
+                    width="110px"
+                  />
+                </FormControl>
+              </form>
             </FormControl>
-            <FormControl width="180px">
-              <label htmlFor="isAnimate">isAnimate</label>
-              <Checkbox
-                id="isAnimate"
-                name="isAnimate"
-                checked={isAnimate}
-                onChange={onIsAnimateChange}
-              />
+            <FormControl width="50%">
+              <Paper>
+                {`<ProgressBar 
+                    progress={${progress}}
+                    isAnimate={${isAnimate}} 
+                    fillColor="${fillColor}"
+                    backgroundColor="${backgroundColor}" 
+                    borderColor="${borderColor}"
+                  />`}
+              </Paper>
             </FormControl>
-          </form>
+          </FormControl>
         </Paper>
       </SettingsContainerStyled>
     </ContentContainer>
