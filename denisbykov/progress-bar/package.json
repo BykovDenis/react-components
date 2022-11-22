@@ -1,7 +1,8 @@
 {
   "name": "@denisbykov/progress-bar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Label react UI",
+  "keywords": "React, progressbar, progress-bar",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
