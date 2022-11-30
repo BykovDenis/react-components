@@ -10,7 +10,9 @@ import Checkbox from "../common/checkbox/index.styled";
 const ProgressBarComponent: React.FunctionComponent = () => {
   const [progress, setProgress] = useState<number>(45);
   const [isAnimate, setIsAnimate] = useState<boolean>(false);
-  const [fillColor, setFillColor] = useState<string>("#2f4699");
+  const [fillColor, setFillColor] = useState<string>(
+    "linear-gradient(90deg, #99984b,#409aec,#e40468)"
+  );
   const [borderColor, setBorderColor] = useState<string>("#666666");
   const [backgroundColor, setBackgroundColor] = useState<string>("#ffffff");
 
