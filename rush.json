@@ -325,7 +325,7 @@
    */
   "projects": [
     {
-      "packageName": "@denisbykov/progressbar",
+      "packageName": "@denisbykov/progress-bar",
       "projectFolder": "denisbykov/progress-bar",
       "reviewCategory": "production"
     },
@@ -338,6 +338,7 @@
       "packageName": "@denisbykov/demo",
       "projectFolder": "demo",
       "reviewCategory": "tools"
+//      "decoupledLocalDependencies": ["@denisbykov/progressbar", "@denisbykov/label"]
     }
     // {
     //   /**

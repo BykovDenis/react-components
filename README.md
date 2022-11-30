@@ -1,2 +1,2 @@
 # react-components
-A lot of react components
+Monorepo. React components

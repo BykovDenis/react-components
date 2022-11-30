@@ -1,3 +1,15 @@
 body {
-  color: blue
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+
+:root {
+
+  --color-black: #333333;
+  --color-white: #ffffff;
+  --color-gray: #cccccc;
+
+  --main-font-color: var(--color-black);
+  --main-background-color: var(--color-white);
+  --main-outline-color: var(--color-gray);
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import TLabel from '../types/tlabel';
+import TProgressBar from '../types/tprogress-bar';
 
-declare const Label: React.FunctionComponent<TLabel>;
-export default Label;
+declare const ProgressBar: React.FunctionComponent<TProgressBar>;
+export default ProgressBar;
