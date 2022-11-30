@@ -15,6 +15,7 @@ const ProgressBarComponent: React.FunctionComponent = () => {
   );
   const [borderColor, setBorderColor] = useState<string>("#666666");
   const [backgroundColor, setBackgroundColor] = useState<string>("#ffffff");
+  const [direction, setDirection] = useState<"ltr" | "rtl">("ltr");
 
   const onProgressChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     const element = evt.target;
@@ -43,6 +44,11 @@ const ProgressBarComponent: React.FunctionComponent = () => {
     setFillColor(element.value);
   };
 
+  const onDirectionChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
+    const element = evt.target;
+    setDirection(element.value as "ltr" | "rtl");
+  };
+
   return (
     <ContentContainer>
       <h1>Progress bar</h1>
@@ -52,6 +58,7 @@ const ProgressBarComponent: React.FunctionComponent = () => {
         fillColor={fillColor}
         backgroundColor={backgroundColor}
         borderColor={borderColor}
+        direction={direction}
       />
       <SettingsContainerStyled>
         <Paper>
@@ -59,8 +66,10 @@ const ProgressBarComponent: React.FunctionComponent = () => {
           <FormControl justifyContent="flex-start">
             <FormControl width="30%">
               <form method="GET">
-                <FormControl width="180px" margin="0 0 15px 0">
-                  <label htmlFor="progress">Progress </label>
+                <FormControl width="195px" margin="0 0 15px 0">
+                  <FormControl width="100px" margin="0 15px 0 0">
+                    <label htmlFor="progress">Progress </label>
+                  </FormControl>
                   <Input
                     id="progress"
                     name="progress"
@@ -69,47 +78,84 @@ const ProgressBarComponent: React.FunctionComponent = () => {
                     type="number"
                     min="0"
                     max="100"
-                    width="110px"
+                    width="80px"
                   />
                 </FormControl>
-                <FormControl width="180px" margin="0 0 15px 0">
-                  <label htmlFor="isAnimate">isAnimate</label>
-                  <Checkbox
-                    id="isAnimate"
-                    name="isAnimate"
-                    checked={isAnimate}
-                    onChange={onIsAnimateChange}
-                  />
+                <FormControl width="145px" margin="0 0 15px 0">
+                  <FormControl width="100px" margin="0 15px 0 0">
+                    <label htmlFor="isAnimate">isAnimate</label>
+                  </FormControl>
+                  <FormControl width="30px">
+                    <Checkbox
+                      id="isAnimate"
+                      name="isAnimate"
+                      checked={isAnimate}
+                      onChange={onIsAnimateChange}
+                    />
+                  </FormControl>
                 </FormControl>
-                <FormControl width="180px" margin="0 0 15px 0">
-                  <label htmlFor="fillColor">Fill color</label>
+                <FormControl width="400px" margin="0 0 15px 0">
+                  <FormControl width="100px" margin="0 15px 0 0">
+                    <label htmlFor="fillColor">Fill color</label>
+                  </FormControl>
                   <Input
                     id="fillColor"
                     name="fillColor"
                     value={fillColor}
                     onChange={onFillColorChange}
-                    width="110px"
+                    width="300px"
                   />
                 </FormControl>
-                <FormControl width="180px" margin="0 0 15px 0">
-                  <label htmlFor="backgroundColor">Background color</label>
+                <FormControl width="400px" margin="0 0 15px 0">
+                  <FormControl width="100px" margin="0 15px 0 0">
+                    <label htmlFor="backgroundColor">Background color</label>
+                  </FormControl>
                   <Input
                     id="backgroundColor"
                     name="backgroundColor"
                     value={backgroundColor}
                     onChange={onBackgroundColorChange}
-                    width="110px"
+                    width="300px"
                   />
                 </FormControl>
-                <FormControl width="180px" margin="0 0 15px 0">
-                  <label htmlFor="borderColor">Border color</label>
+                <FormControl width="195px" margin="0 0 15px 0">
+                  <FormControl width="100px" margin="0 15px 0 0">
+                    <label htmlFor="borderColor">Border color</label>
+                  </FormControl>
                   <Input
                     id="borderColor"
                     name="borderColor"
                     value={borderColor}
                     onChange={onBorderColorChange}
-                    width="110px"
+                    width="80px"
                   />
+                </FormControl>
+                <FormControl width="180px" margin="0 0 15px 0">
+                  <FormControl width="100px" margin="0 15px 0 0">
+                    <label htmlFor="borderColor">Direction</label>
+                  </FormControl>
+                  <FormControl width="80px">
+                    <label>
+                      <input
+                        type="radio"
+                        name="direction"
+                        value="ltr"
+                        onChange={onDirectionChange}
+                        checked={direction === "ltr"}
+                      />
+                      {"  "}ltr
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        name="direction"
+                        value="rtl"
+                        onChange={onDirectionChange}
+                        checked={direction === "rtl"}
+                      />
+                      {"  "}rtl
+                    </label>
+                  </FormControl>
                 </FormControl>
               </form>
             </FormControl>
@@ -121,6 +167,7 @@ const ProgressBarComponent: React.FunctionComponent = () => {
                     fillColor="${fillColor}"
                     backgroundColor="${backgroundColor}" 
                     borderColor="${borderColor}"
+                    direction="${direction}"
                   />`}
               </Paper>
             </FormControl>
