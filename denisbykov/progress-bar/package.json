@@ -1,7 +1,7 @@
 {
   "name": "@denisbykov/progress-bar",
-  "version": "0.0.2",
-  "description": "Label react UI",
+  "version": "0.0.5",
+  "description": "Progressbar react UI",
   "keywords": "React, progressbar, progress-bar",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
@@ -30,5 +30,8 @@
     "typescript": "^4.4.4",
     "tslib": "^2.3.1"
   },
-  "gitHead": "a5deb14a67f2b5234ffd0d305593cd81fc18ec80"
+  "gitHead": "a5deb14a67f2b5234ffd0d305593cd81fc18ec80",
+  "homepage": "https://github.com/BykovDenis/react-components#readme",
+  "bugs" : "https://github.com/owner/project/issues",
+  "email" : "stivenrain@gmail.com"
 }

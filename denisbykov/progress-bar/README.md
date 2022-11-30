@@ -28,5 +28,6 @@ The demo http://react-components.denisbykov.tech/progressbar
         <tr><td>progress</td><td>number</td></tr>
         <tr><td>isAnimate</td><td>boolean</td></tr>
         <tr><td>fontSize</td><td>string</td></tr>
+        <tr><td>direction</td><td> ltr | rtl</td></tr>
     </tbody>
 </table>
