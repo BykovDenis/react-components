@@ -1,11 +1,13 @@
-import React, { Fragment, useState } from "react";
 import ProgressBar from "@denisbykov/progress-bar";
+import React, { useState } from "react";
+
+import Button from "../common/button";
+import Checkbox from "../common/checkbox/index.styled";
+import FormControl from "../common/form-control/index.styled";
+import Input from "../common/input/index.styled";
 import Paper from "../common/paper";
 import ContentContainer from "./content-container.styled";
 import SettingsContainerStyled from "./settings-container.styled";
-import Input from "../common/input/index.styled";
-import FormControl from "../common/form-control/index.styled";
-import Checkbox from "../common/checkbox/index.styled";
 
 const ProgressBarComponent: React.FunctionComponent = () => {
   const [progress, setProgress] = useState<number>(45);
@@ -159,7 +161,7 @@ const ProgressBarComponent: React.FunctionComponent = () => {
                 </FormControl>
               </form>
             </FormControl>
-            <FormControl width="50%">
+            <FormControl width="50%" flexDirection="column">
               <Paper>
                 {`<ProgressBar 
                     progress={${progress}}
@@ -170,6 +172,7 @@ const ProgressBarComponent: React.FunctionComponent = () => {
                     direction="${direction}"
                   />`}
               </Paper>
+              <Button>Copy code</Button>
             </FormControl>
           </FormControl>
         </Paper>

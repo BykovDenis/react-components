@@ -1,5 +1,5 @@
 type TPaper = {
-  children?: any,
+  children?: any;
 };
 
 export default TPaper;

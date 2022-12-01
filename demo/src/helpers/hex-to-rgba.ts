@@ -5,11 +5,11 @@ function hexToRgba(hex: string, alpha: number): string {
     const b = parseInt(hex.slice(5, 7), 16);
 
     if (alpha) {
-      return 'rgba(' + r + ', ' + g + ', ' + b + ', ' + alpha + ')';
+      return "rgba(" + r + ", " + g + ", " + b + ", " + alpha + ")";
     }
-    return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+    return "rgb(" + r + ", " + g + ", " + b + ")";
   }
-  return '#ff0000';
+  return "#ff0000";
 }
 
 export default hexToRgba;

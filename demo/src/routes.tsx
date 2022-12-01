@@ -1,16 +1,17 @@
-import React from 'react';
-import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
-import App from './components/app';
-import ProgressBarComponent from './components/progress-bar-component';
+import React from "react";
+import { createBrowserRouter, Route, RouterProvider } from "react-router-dom";
+
+import App from "./components/app";
+import ProgressBarComponent from "./components/progress-bar-component";
 
 const Routes: React.FunctionComponent = () => {
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: "/",
       element: <App />,
     },
     {
-      path: '/progressbar',
+      path: "/progressbar",
       element: <ProgressBarComponent />,
     },
   ]);

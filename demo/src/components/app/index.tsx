@@ -1,7 +1,8 @@
-import React, { Fragment, FunctionComponent } from 'react';
-import './index.css';
-import Label from '@denisbykov/label';
+import "./index.css";
+
+import Label from "@denisbykov/label";
 import ProgressBar from "@denisbykov/progress-bar";
+import React, { Fragment, FunctionComponent } from "react";
 
 const App: FunctionComponent = () => {
   return (

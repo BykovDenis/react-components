@@ -1,16 +1,18 @@
 import styled from "styled-components";
 
 type TFormControl = {
+  flexDirection?: string;
   justifyContent?: string;
-  width?: string;
   margin?: string;
+  width?: string;
 };
 
 const FormControl = styled.div<TFormControl>`
   box-sizing: border-box;
   width: ${(props: TFormControl) => (props?.width ? props.width : "100%")};
   display: flex;
-  flex-direction: row;
+  flex-direction: ${(props: TFormControl) =>
+    props.flexDirection ? props.flexDirection : "row"};
   align-items: center;
   justify-content: ${(props: TFormControl) =>
     props.justifyContent ? props.justifyContent : "space-between"};
