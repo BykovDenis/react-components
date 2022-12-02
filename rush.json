@@ -325,6 +325,11 @@
    */
   "projects": [
     {
+      "packageName": "@denisbykov/notifier",
+      "projectFolder": "denisbykov/notifier",
+      "reviewCategory": "production"
+    },
+    {
       "packageName": "@denisbykov/progress-bar",
       "projectFolder": "denisbykov/progress-bar",
       "reviewCategory": "production"
