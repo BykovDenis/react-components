@@ -136,6 +136,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new webpack.ProvidePlugin({
       process: "process/browser",
+      React: 'react',
     }),
     // красивые прогрессбарчики билдинга
     new WebpackBar(),

@@ -3,6 +3,7 @@ import { createBrowserRouter, Route, RouterProvider } from "react-router-dom";
 
 import App from "./components/app";
 import ProgressBarComponent from "./components/progress-bar-component";
+import WindowNotifier from './components/window-notifier';
 
 const Routes: React.FunctionComponent = () => {
   const router = createBrowserRouter([
@@ -13,6 +14,10 @@ const Routes: React.FunctionComponent = () => {
     {
       path: "/progressbar",
       element: <ProgressBarComponent />,
+    },
+    {
+      path: "/notifier",
+      element: <WindowNotifier />,
     },
   ]);
   return <RouterProvider router={router} />;
